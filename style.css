@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#ballContainer {
+  text-align: center;
+  padding: 10px;
+}
+
+.ball {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: auto;
+  list-style: none;
+  margin-left: 20px;
+}
+
+.ball:hover {
+  cursor: pointer;
+  border: 3px solid black;
+}
+
+#buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#reset-game {
+  padding: 10px;
+  color: red;
+  background-color: white;
+}
+
+#reset-game:hover {
+  color: white;
+  background-color: red;
+}
