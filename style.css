@@ -7,10 +7,15 @@
 body {
   background-image: url(./imgs/rainbow-colorful-spiral-background-vector-8301242.jpg);
   background-repeat: no-repeat;
-  height: 300px;
   background-size: cover;
-  background-position: top center;
-  }
+  background-position: center;
+  height: 1100px;
+  /* max-height: 1200px; */
+  
+  
+  
+  position: relative;
+}
 
  header {
    background-color: rgba(255, 255, 255, 0.411);
@@ -24,11 +29,12 @@ main {
   margin: 100px auto;
   max-width: 500px;
   width: 100%;
-  max-height: 800px;
+  max-height: 500px;
   height: 500px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 8px 9px 20px black;
+  text-align: center;
 }
 
 #container {
@@ -38,6 +44,7 @@ main {
 h2 {
   margin-bottom: 20px;
   display: inline-block;
+  margin-right: 10px;
 }
 
 #rgb-color {
@@ -47,6 +54,10 @@ h2 {
 .placar{
   display: inline-block;
   font-size: 24px;
+}
+
+#score{
+  font-weight: bold;
 }
 
 #ballContainer {
@@ -62,7 +73,8 @@ h2 {
   border: 2px solid black;
   margin: auto;
   list-style: none;
-  margin-left: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .ball:hover {
@@ -84,4 +96,40 @@ h2 {
 #reset-game:hover {
   color: white;
   background-color: red;
+}
+
+/* query */
+
+@media only screen and (max-width: 600px) {
+
+  main{
+    width: 300px;
+  }
+  
+  h1{
+    font-size: 40px;
+    
+  }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+  main{
+    width: 250px;
+  }
+  
+  h1{
+    font-size: 30px;
+  }
+
+  h2{
+    font-size: 20px;
+  }
+
+  #rgb-color{
+    font-size: 18px;
+    margin-left: -10px;
+  }
+
 }
