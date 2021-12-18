@@ -3,6 +3,7 @@
   padding: 0;
   text-align: center;
   box-sizing: border-box;
+  font-family: 'Acme', sans-serif;
 }
 body {
   background-image: url(./imgs/rainbow-colorful-spiral-background-vector-8301242.jpg);
@@ -10,19 +11,14 @@ body {
   background-size: cover;
   background-position: center;
   height: 1100px;
-  /* max-height: 1200px; */
-  
-  
-  
-  position: relative;
 }
 
  header {
    background-color: rgba(255, 255, 255, 0.411);
    width: 100%;
-   height: 100px;
-   padding: 20px;
-   font-size: 30px;
+   height: 200px;
+   padding: 30px;
+   font-size: 45px;
  } 
 
 main {
@@ -106,9 +102,9 @@ h2 {
     width: 300px;
   }
   
-  h1{
+  header{
     font-size: 40px;
-    
+    height: 220px;
   }
 
 }
@@ -120,7 +116,7 @@ h2 {
     margin-top: 50px;
   }
   
-  h1{
+  header{
     font-size: 30px;
   }
 
