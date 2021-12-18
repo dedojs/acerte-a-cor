@@ -1,32 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
     <title>Advinhe a cor!</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1 id="title">Adivinhe a cor!</h1>
+      <h1 id="title">Adivinhe a cor!</h1>
     </header>
     <main>
-        <div id='generateContainer'>
-            <p id="rgb-color"></p>
-            <p id="score">Placar: 0</p>
+      <div id="container">
+        <div id="cor">
+          <h2>Cor:</h2>
+          <p id="rgb-color"></p>
+        </div>
+        <div id="placar">
+          <p class="placar">Placar:</p>  
+          <p class='placar' id="score">0</p>
+        </div>
         </div>
         <div id="ballContainer">
-            <ul id="ballList"></ul>
+          <ul id="ballList"></ul>
         </div>
         <div id="buttons">
-            <p id="answer">Escolha uma cor</p>
-            <button id="reset-game">Iniciar / Resetar</button>
+          <p id="answer">Escolha uma cor</p>
+          <button id="reset-game">Iniciar / Resetar</button>
         </div>
+      </div>
     </main>
-    <footer>
-
-    </footer>
-<script src="script.js"></script>
-</body>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
 </html>
