@@ -6,6 +6,7 @@ const resetGame = document.getElementById('reset-game');
 const answer = document.getElementById('answer');
 const score = document.getElementById('score');
 let placar = 0;
+let acertos = 0
 
 // gerar cor aleatoria
 function generateRGB() {
@@ -38,9 +39,20 @@ function descobrirCor(element) {
   if (alvo.style.backgroundColor === resposta) {
     answer.innerText = 'Acertou!';
     placar += 3;
+    acertos += 1;
     score.innerText = placar;
   } else if (alvo.style.backgroundColor !== resposta) {
     answer.innerText = 'Errou! Tente novamente!';
+    placar -= 1;
+    score.innerText = placar;
+    if(placar < 0){
+      window.alert('GAME OVER');
+      score.innerText = 'GAME OVER';
+      let l = document.createElement('LI');
+      l.innerText = `Jogador: ${nick.value}-----------> ${acertos} acertos`
+      lista.appendChild(l)
+      placar = 0;
+    }
   } else {
     answer.innerText = 'Escolha uma cor';
   }
@@ -62,3 +74,39 @@ function startGame() {
 }
 resetGame.addEventListener('click', startGame);
 window.addEventListener('load', startGame);
+
+//------------
+
+const btnRules = document.getElementById('btn-rules');
+const btnScore = document.getElementById('btn-score');
+const main = document.getElementById('main');
+const rules = document.getElementById('rules');
+const scoreBoard = document.getElementById('scoreBoard')
+const btnGame = document.getElementById('btn-game');
+let player = document.getElementById('player')
+let nick = document.getElementById('nick');
+let lista = document.getElementById('lista');
+
+btnRules.addEventListener('click', () => {
+  scoreBoard.style.display = 'none';
+  main.style.display = 'none';
+  rules.style.display = 'block';
+})
+
+btnScore.addEventListener('click', () => {
+  rules.style.display = 'none';
+  main.style.display = 'none';
+  scoreBoard.style.display = 'block';
+})
+
+btnGame.addEventListener('click', () => {
+  rules.style.display = 'none';
+  main.style.display = 'block';
+  scoreBoard.style.display = 'none';
+})
+
+/* let jogador = prompt('Qual o seu nome?'); */
+nick.addEventListener('keyup', () => {
+  player.innerText = `Seja bem vindo(a): ${nick.value}`;
+  
+})

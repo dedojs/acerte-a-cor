@@ -13,8 +13,23 @@
   <body>
     <header>
       <h1 id="title">Adivinhe a cor!</h1>
+      <button id="btn-rules">Regras</button>
+      <button id='btn-game'>Game</button>
+      <button id="btn-score">Placar</button>
     </header>
     <main>
+        <aside>
+            <div id="rules">
+                <h2>Regras</h2>
+                <ol>
+                    <li>Clique em um círculo para fazer sua jogada.</li>
+                    <li>Cada acerto vale 3 pontos</li>
+                    <li>Cada erro você perd 1 ponto</li>
+                    <li>O jogo acaba quando o jogador gastar todos os seus pontos e ficar com <span style="color: red">-1</span> no placar</li>
+                </ol>
+            </div>
+        </aside>
+        <div id='main'>
       <div id="container">
         <div id="cor">
           <h2>Cor:</h2>
@@ -32,9 +47,25 @@
           <p id="answer">Escolha uma cor</p>
           <button id="reset-game">Iniciar / Resetar</button>
         </div>
+        <div id="dataPlayer">
+        <label>Nome do jogador:</label>
+        <input id='nick' type="text" >
+        <p id="player"></p>
+        </div>
       </div>
+    </div>
+    <aside>
+        <div id=scoreBoard>
+            <h2>Placar</h2>
+            <ol id="lista">
+                
+            </ol>
+        </div>
+    </aside>
     </main>
-    <footer></footer>
+    <footer>
+
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
