@@ -39,26 +39,28 @@ window.addEventListener('load', generateRings);
 function descobrirCor(element) {
   const alvo = element.target;
   const resposta = text.innerHTML;
+  /* const msgGameOver = window.alert('GAME OVER'); */
   if (alvo.style.backgroundColor === resposta) {
     answer.innerText = 'Acertou!';
     mario.play();
     placar += 3;
     acertos += 1;
     score.innerText = placar;
+    setTimeout(startGame, 1000);
   } else if (alvo.style.backgroundColor !== resposta) {
     answer.innerText = 'Errou! Tente novamente!';
     gameOver.play();
     placar -= 1;
     score.innerText = placar;
+    setTimeout(startGame, 1000);
     if(placar < 0){
       point.play();
-      window.alert('GAME OVER');
       score.innerText = 'GAME OVER';
       let l = document.createElement('LI');
       l.innerText = `Jogador: ${nick.value}-----------> ${acertos} acertos`
       lista.appendChild(l)
       placar = 0;
-      
+      /* setTimeout(msgGameOver, 1000) */
     }
   } else {
     answer.innerText = 'Escolha uma cor';
