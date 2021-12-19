@@ -60,11 +60,12 @@ function descobrirCor(element) {
       l.innerText = `Jogador: ${nick.value}-----------> ${acertos} acertos`
       lista.appendChild(l)
       placar = 0;
-      /* setTimeout(msgGameOver, 1000) */
+      document.getElementById('pontuacao').innerText = `Jogador: ${nick.value}-----------> ${acertos} acertos`
     }
   } else {
     answer.innerText = 'Escolha uma cor';
   }
+  
 }
 ballList.addEventListener('click', descobrirCor);
 
@@ -117,5 +118,13 @@ btnGame.addEventListener('click', () => {
 /* let jogador = prompt('Qual o seu nome?'); */
 nick.addEventListener('keyup', () => {
   player.innerText = `Seja bem vindo(a): ${nick.value}`;
-  
+})
+
+const startReset = document.getElementById('startReset');
+
+startReset.addEventListener('click', () => {
+  placar = 0;
+  score.innerText = placar;
+  nick.value = '';
+  startGame();
 })

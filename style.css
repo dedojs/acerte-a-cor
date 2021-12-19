@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  
   box-sizing: border-box;
   font-family: 'Acme', sans-serif;
 }
@@ -42,10 +41,10 @@ main{
 }
 
 #rules{
-  max-width: 300px;
+  max-width: 500px;
   width: 100%;
   margin-top: 100px;
-  height: 500px;
+  height: 700px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 8px 9px 20px black;
@@ -145,6 +144,7 @@ h2 {
   margin-top: 20px;
   font-size: 30px;
   text-transform: capitalize;
+  margin-bottom: 20px;
 }
 #nick {
   color: blue;
@@ -153,17 +153,16 @@ h2 {
 footer{
   margin-top: 100px;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.411);
-  
+  background-color: rgb(3, 3, 3);
+  text-align: center;
+  z-index: 1;
 }
 
-footer{
-  text-align: center;
-}
 #menuContato{
   text-align: center;
   margin-top: 5px;
   width: 100%;
+  color: white;
 }
 
 #menuContato li{
@@ -182,11 +181,11 @@ footer{
   }
   #rules{
     width: 300px;
-    
+    height: 600px;
   }
   #scoreBoard{
     width: 300px;
-
+    height: 600px;
   }
   
   header{
@@ -202,6 +201,16 @@ footer{
     width: 250px;
     margin-top: 50px;
     height: 700px;
+  }
+  #rules{
+    width: 250px;
+    height: 700px;
+    margin-top: 50px;
+  }
+  #scoreBoard{
+    width: 250px;
+    height: 700px;
+    margin-top: 50px;
   }
   
   header{

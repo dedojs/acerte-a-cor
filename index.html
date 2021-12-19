@@ -22,10 +22,14 @@
             <div id="rules">
                 <h2>Regras</h2>
                 <ol>
+                    <li>RGB é um sistema de cores aditivas e primárias que carrega na abreviação as nomenclaturas red, green e blue – em língua portuguesa rgb (vermelho, verde e azul).</li>
+                    <li>O valor máximo para cada cor é 255 e o mínimo 0.</li>
+                    <li>Utilize essa dica para tentar acertas as cores!</li>
                     <li>Clique em um círculo para fazer sua jogada.</li>
                     <li>Cada acerto vale 3 pontos</li>
-                    <li>Cada erro você perd 1 ponto</li>
+                    <li>Cada erro você perde 1 ponto</li>
                     <li>O jogo acaba quando o jogador gastar todos os seus pontos e ficar com <span style="color: red">-1</span> no placar</li>
+                    <li>Bom jogo! Boa sorte!</li>
                 </ol>
             </div>
         </aside>
@@ -45,12 +49,14 @@
         </div>
         <div id="buttons">
           <p id="answer">Escolha uma cor</p>
-          <button id="reset-game">Iniciar / Resetar</button>
+          <button id="startReset">Start / Reset</button>
+          <button id="reset-game">Próxima Rodada</button>
         </div>
         <div id="dataPlayer">
         <label>Nome do jogador:</label>
         <input id='nick' type="text" >
         <p id="player"></p>
+        <p id="pontuacao"></p>
         </div>
       </div>
     </div>
