@@ -7,6 +7,9 @@ const answer = document.getElementById('answer');
 const score = document.getElementById('score');
 let placar = 0;
 let acertos = 0
+const gameOver = new Audio("sounds/Error-sound-effect.mp3")
+const point = new Audio('sounds/Lost-life-sound-effect.mp3')
+const mario = new Audio('sounds/Mario-coin-sound.mp3')
 
 // gerar cor aleatoria
 function generateRGB() {
@@ -38,20 +41,24 @@ function descobrirCor(element) {
   const resposta = text.innerHTML;
   if (alvo.style.backgroundColor === resposta) {
     answer.innerText = 'Acertou!';
+    mario.play();
     placar += 3;
     acertos += 1;
     score.innerText = placar;
   } else if (alvo.style.backgroundColor !== resposta) {
     answer.innerText = 'Errou! Tente novamente!';
+    gameOver.play();
     placar -= 1;
     score.innerText = placar;
     if(placar < 0){
+      point.play();
       window.alert('GAME OVER');
       score.innerText = 'GAME OVER';
       let l = document.createElement('LI');
       l.innerText = `Jogador: ${nick.value}-----------> ${acertos} acertos`
       lista.appendChild(l)
       placar = 0;
+      
     }
   } else {
     answer.innerText = 'Escolha uma cor';
