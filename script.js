@@ -56,7 +56,7 @@ function descobrirCor(element) {
     descontar (element)
     score.innerText = placar;
     setTimeout(startGame, 1000);
-    if(placar < 0){
+    if(placar <= 0){
       point.play();
       score.innerText = 'GAME OVER';
       let l = document.createElement('LI');
@@ -78,7 +78,6 @@ function startGame() {
   answer.innerText = 'Escolha uma cor';
   for (let i = 0; i < rings.length; i += 1) {
     rings[i].style.backgroundColor = generateRGB();
-    /* rings[index].id = 'element'; */
     text.innerHTML = rings[index].style.backgroundColor;
     if (rings[index].id === 'element') {
       rings[i].id = '';
@@ -127,7 +126,7 @@ nick.addEventListener('keyup', () => {
 const startReset = document.getElementById('startReset');
 
 startReset.addEventListener('click', () => {
-  placar = 0;
+  placar = 3;
   score.innerText = placar;
   nick.value = '';
   startGame();
