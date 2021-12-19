@@ -257,7 +257,7 @@ footer{
 
   #main{
     width: 300px;
-    height: 600px;
+    height: 700px;
   }
   #rules{
     width: 300px;
@@ -269,8 +269,16 @@ footer{
   }
   
   header{
-    font-size: 40px;
+    font-size: 30px;
     height: 220px;
+  }
+
+  #startReset {
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+  body {
+    height: 1200px;
   }
 
 }
