@@ -150,6 +150,28 @@ h2 {
   color: blue;
 }
 
+footer{
+  margin-top: 100px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.411);
+  
+}
+
+footer{
+  text-align: center;
+}
+#menuContato{
+  text-align: center;
+  margin-top: 5px;
+  width: 100%;
+}
+
+#menuContato li{
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
 /* query */
 
 @media only screen and (max-width: 600px) {
