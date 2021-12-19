@@ -5,11 +5,13 @@ let index;
 const resetGame = document.getElementById('reset-game');
 const answer = document.getElementById('answer');
 const score = document.getElementById('score');
-let placar = 0;
+let placar = 3;
 let acertos = 0
 const gameOver = new Audio("sounds/Error-sound-effect.mp3")
 const point = new Audio('sounds/Lost-life-sound-effect.mp3')
 const mario = new Audio('sounds/Mario-coin-sound.mp3')
+const congrats = new Audio('sounds/Congratulations-sound.mp3')
+const intro = new Audio ('sounds/Rock-and-roll.wav')
 
 // gerar cor aleatoria
 function generateRGB() {
@@ -46,11 +48,12 @@ function descobrirCor(element) {
     placar += 3;
     acertos += 1;
     score.innerText = placar;
+    nextLevel();
     setTimeout(startGame, 1000);
   } else if (alvo.style.backgroundColor !== resposta) {
     answer.innerText = 'Errou! Tente novamente!';
     gameOver.play();
-    placar -= 1;
+    descontar (element)
     score.innerText = placar;
     setTimeout(startGame, 1000);
     if(placar < 0){
@@ -118,6 +121,7 @@ btnGame.addEventListener('click', () => {
 /* let jogador = prompt('Qual o seu nome?'); */
 nick.addEventListener('keyup', () => {
   player.innerText = `Seja bem vindo(a): ${nick.value}`;
+  intro.play()
 })
 
 const startReset = document.getElementById('startReset');
@@ -128,3 +132,31 @@ startReset.addEventListener('click', () => {
   nick.value = '';
   startGame();
 })
+
+// niveis de dificuldade
+
+function descontar (element) {
+  const alvo = element.target;
+  const resposta = text.innerHTML;
+  if (alvo.style.backgroundColor !== resposta && placar <= 10) {
+    placar -= 1
+  } else if (alvo.style.backgroundColor !== resposta && placar > 10 && placar <= 20) {
+    placar -= 3
+  } else if (alvo.style.backgroundColor !== resposta && placar > 20 && placar <= 30) {
+    placar -= 5
+  } else if (alvo.style.backgroundColor !== resposta && placar > 30 && placar <= 50) {
+    placar -= 10
+  }  else if (alvo.style.backgroundColor !== resposta && placar > 50 && placar <= 100) {
+    placar -= 20
+  }  
+}
+
+function nextLevel() {
+  if (placar > 20) {
+    player.innerText = `Parabéns ${nick.value}`
+    congrats.play()
+  } else if (placar > 30) {
+    player.innerText = `Parabéns ${nick.value}`
+    congrats.play()
+  }
+}
