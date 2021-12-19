@@ -15,7 +15,7 @@ body {
  header {
    background-color: rgba(255, 255, 255, 0.411);
    width: 100%;
-   height: 200px;
+   height: 220px;
    padding: 30px;
    font-size: 45px;
    text-align: center;
@@ -124,7 +124,7 @@ h2 {
   margin-top: 10px;
 }
 
-#reset-game {
+/* #reset-game {
   margin-top: 10px;
   padding: 10px;
   color: red;
@@ -134,7 +134,7 @@ h2 {
 #reset-game:hover {
   color: white;
   background-color: red;
-}
+} */
 
 #dataPlayer{
   margin-top: 30px;
@@ -170,6 +170,86 @@ footer{
   margin-top: 5px;
   margin-left: 5px;
 }
+
+.btn {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-green {
+  background-color: green;
+  color: white;
+  box-shadow:5px 5px 3px #006000 ;
+}
+
+.btn-green:hover{
+  background-color: #006000;
+  color: white;
+  box-shadow:5px 5px 3px #003f00 ;
+}
+.btn-green:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+.btn-red {
+  background-color: red;
+  color: white;
+  box-shadow:5px 5px 3px rgb(129, 2, 2) ;
+}
+
+.btn-red:hover{
+  background-color: rgb(165, 3, 3) ;
+  color: white;
+  box-shadow:5px 5px 3px #270101 ;
+}
+.btn-red:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+.btn-yellow {
+  background-color: rgb(255, 255, 0);
+  color: black;
+  box-shadow:5px 5px 3px rgb(144, 135, 1) ;
+}
+
+.btn-yellow:hover{
+  background-color: rgb(240, 217, 15) ;
+  color: black;
+  box-shadow:5px 5px 3px #4b4901 ;
+}
+.btn-yellow:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+.btn-blue {
+  background-color: rgb(0, 0, 255);
+  color: rgb(255, 255, 255);
+  box-shadow:5px 5px 3px rgb(1, 44, 85) ;
+}
+
+.btn-blue:hover{
+  background-color: rgb(10, 6, 248) ;
+  color: rgb(255, 255, 255);
+  box-shadow:5px 5px 3px #01084b ;
+}
+.btn-blue:active{
+  position: relative;
+  top: 5px;
+  box-shadow: none;
+}
+
+
 
 /* query */
 
